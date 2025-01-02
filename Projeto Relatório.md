@@ -190,7 +190,13 @@ Se porventura for inserido um título ou um DOI já existente, um aviso será mo
     <img src="Fotos%20Projeto/Duplicated%20DOI.png" alt="Descrição da Imagem" width="300"/>
 </p>
 
-- Atualizar publicações existentes
+Após inserir as informações corretamente e guardar a nova publicação, a janela seguinte será exposta:
+<p align="center">
+    <img src="Fotos%20Projeto/File%20Saved.png" alt="logo" width="300"/>
+</p>
+
+#### 2.2 Atualizar publicações existentes
+
 - Eliminar publicações
 - Validação e verificação de duplicados
 
