@@ -388,11 +388,35 @@ Após inserida as datas uma janela igual à função anterior aparecerá com as 
 #### 4.1 Distribuição de publicações por ano
 O programa é capaz de exibir um gráfico com a distribuição de publicações por ano.
 <p align="center">
-    <img src="Fotos%20Projeto/No%20Search%20Date.png" alt="Descrição da Imagem" width="400"/>
+    <img src="Fotos%20Projeto/Post%20Distribution%20Year.png" alt="Descrição da Imagem" width="600"/>
 </p>
-- Distribuição mensal de publicações
-- Métricas de publicação por autor
-- Análise de frequência de palavras-chave
+
+#### 4.2 Distribuição mensal de publicações
+O programa é capaz de exibir um gráfico com a distribuição mensal de publicações num dado ano.
+<p align="center">
+    <img src="Fotos%20Projeto/Publication%20Year.png" alt="Descrição da Imagem" width="350"/>
+    <img src="Fotos%20Projeto/Post%20Distribution%20Month.png" alt="Descrição da Imagem" width="500"/>
+</p>
+
+#### 4.3 Número de publicação por autor (Top20)
+O programa é capaz de exibir um gráfico com o número de publicações de um autor, mas apenas o Top20 
+<p align="center">
+    <img src="Fotos%20Projeto/Number%20Post%20Author.png" alt="Descrição da Imagem" width="700"/>
+</p>
+
+#### 4.4 Distribuição de publicações por ano de um dado autor
+O programa é capaz de exibir um gráfico com a distribuição de publicações por ano após ser selecionado um autor especifico.
+<p align="center">
+    <img src="Fotos%20Projeto/Select%20Author.png" alt="Descrição da Imagem" width="300"/>
+    <img src="Fotos%20Projeto/Post%20Distribution%20Year%20Author.png" alt="Descrição da Imagem" width="600"/>
+</p>
+
+#### 4.5 Distribuição de palavras-chave pela sua frequência
+O programa é capaz de exibir um gráfico com a distribuição das palavras-chave pela sua frequência.
+<p align="center">
+    <img src="Fotos%20Projeto/Distribution%20Keywords%20Frequency.png" alt="Descrição da Imagem" width="800"/>
+</p>
+
 
 ### 5. Interface do Utilizador
 - Organização do menu principal
