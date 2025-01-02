@@ -322,7 +322,12 @@ O programa é capaz de encontrar publicações utilizando vários filtros, tais 
     <img src="Fotos%20Projeto/Search%20Filters.png" alt="logo" width="500"/>
 </p>
 
-Após o programa procurar as publicações que apresetem os parâmentros preenchidos será mostrada na seguinte janela:
+Se não existir nenhuma publicação com os parâmetros submetidos, esta será apresentada:
+<p align="center">
+    <img src="Fotos%20Projeto/No%20Filter%20Search.png" alt="logo" width="400"/>
+</p>
+
+Após o programa procurar as publicações que apresentem os parâmentros preenchidos, será mostrada na seguinte janela as informações todas das publicações, os links que dão para interagrir direcionando diretamente para a Web
 <p align="center">
     <img src="Fotos%20Projeto/Document%20Information.png" alt="logo" width="500"/>
 </p>
@@ -338,15 +343,53 @@ O botão "Save Search" aprsentado na janela serve para o utilizador poder guarda
 
 #### 3.2 Pesquisa por título
 O programa tem a funcionalidade de apresentar uma lista com todos os títulos das publicações presentes no dataset, com a possibilidade de os organizar por ordem alfabética ou por data de publicação.
+<p align="center">
+    <img src="Fotos%20Projeto/Title%20List.png" alt="Descrição da Imagem" width="600"/>
+</p>
 
+Se o utilizador selecionar um dos títulos apresentados, uma janela igual à função anterior aparecerá com as informações da publicação e com o botão para salvar a pesquisa.
 
-- Pesquisa por autor
-- Pesquisa por afiliação
-- Pesquisa por palavras-chave
-- Pesquisa por intervalo de datas
+#### 3.3 Pesquisa por autor
+O programa tem a funcionalidade de apresentar uma lista com todos os autores das publicações presentes no dataset, com a possibilidade de os organizar por ordem alfabética ou pela sua frequencia.
+<p align="center">
+    <img src="Fotos%20Projeto/Author%20List.png" alt="Descrição da Imagem" width="400"/>
+</p>
+
+Se o utilizador selecionar um dos autores apresentados, uma janela igual à função anterior aparecerá com as informações da publicação e com o botão para salvar a pesquisa.
+
+#### 3.4 Pesquisa por afiliação
+O programa tem a funcionalidade de apresentar uma lista com todas as afiliações das publicações presentes no dataset, com a possibilidade de os organizar por ordem alfabética ou pela sua frequencia.
+<p align="center">
+    <img src="Fotos%20Projeto/Afilliation%20List.png" alt="Descrição da Imagem" width="600"/>
+</p>
+
+Se o utilizador selecionar uma das afiliações apresentados, uma janela igual à função anterior aparecerá com as informações da publicação e com o botão para salvar a pesquisa.
+
+#### 3.5 Pesquisa por palavras-chave
+O programa tem a funcionalidade de apresentar uma lista com todas as palavras-chave das publicações presentes no dataset, com a possibilidade de os organizar por ordem alfabética ou pela sua frequencia.
+<p align="center">
+    <img src="Fotos%20Projeto/Keyword%20List.png" alt="Descrição da Imagem" width="600"/>
+</p>
+
+Se o utilizador selecionar uma das palavras-chave apresentados, uma janela igual à função anterior aparecerá com as informações da publicação e com o botão para salvar a pesquisa.
+
+#### 3.6 Pesquisa por intervalo de datas
+O programa tem a funcionalidade de procurar publicações num dado intervalo de tempo.
+<p align="center">
+    <img src="Fotos%20Projeto/Search%20Date.png" alt="Descrição da Imagem" width="300"/>
+</p>
+
+Após inserida as datas uma janela igual à função anterior aparecerá com as informações da publicação e com o botão para salvar a pesquisa. Se não houver nenhuma publicação no dado intervalo de tempo a seguinte janela será exibida:
+<p align="center">
+    <img src="Fotos%20Projeto/No%20Search%20Date.png" alt="Descrição da Imagem" width="400"/>
+</p>
 
 ### 4. Análise Estatística
-- Distribuição de publicações por ano
+#### 4.1 Distribuição de publicações por ano
+O programa é capaz de exibir um gráfico com a distribuição de publicações por ano.
+<p align="center">
+    <img src="Fotos%20Projeto/No%20Search%20Date.png" alt="Descrição da Imagem" width="400"/>
+</p>
 - Distribuição mensal de publicações
 - Métricas de publicação por autor
 - Análise de frequência de palavras-chave
