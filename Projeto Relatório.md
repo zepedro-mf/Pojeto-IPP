@@ -319,8 +319,21 @@ def remover_publicacao(publicacao_encontrada, caminho_ficheiro, publicacoes):
 #### 3.1 Pesquisa com filtros
 O programa é capaz de encontrar publicações utilizando vários filtros, tais como, palavra-chave, autor, afiliação, intervalo de tempo. Para realizar a pesquisa a seguinte janela é exibida:
 <p align="center">
-    <img src="Fotos%20Projeto/Delete%20Post.png" alt="logo" width="400"/>
+    <img src="Fotos%20Projeto/Search%20Filters.png" alt="logo" width="500"/>
 </p>
+
+Após o programa procurar as publicações que apresetem os parâmentros preenchidos será mostrada na seguinte janela:
+<p align="center">
+    <img src="Fotos%20Projeto/Document%20Information.png" alt="logo" width="500"/>
+</p>
+
+O botão "Save Search" aprsentado na janela serve para o utilizador poder guardar a pesquisa em ficheiro txt ou em um ficheiro json com a mesma estrutura do dataset.
+<p align="center">
+    <img src="Fotos%20Projeto/Duplicated%20Title.png" alt="Descrição da Imagem" width="300"/>
+    <img src="Fotos%20Projeto/Duplicated%20DOI.png" alt="Descrição da Imagem" width="300"/>
+</p>
+
+
 
 - Pesquisa por título
 - Pesquisa por autor
