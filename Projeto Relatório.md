@@ -417,6 +417,12 @@ O programa é capaz de exibir um gráfico com a distribuição das palavras-chav
     <img src="Fotos%20Projeto/Distribution%20Keywords%20Frequency.png" alt="Descrição da Imagem" width="800"/>
 </p>
 
+#### 4.6 Número de palavras-chave num dado ano (Top20)
+O programa é capaz de exibir um gráfico com o número de palavras-chave após ser selecionado um determinado ano 
+<p align="center">
+    <img src="Fotos%20Projeto/Publication%20Year.png" alt="Descrição da Imagem" width="300"/>
+    <img src="Fotos%20Projeto/Top20%20Keywords%20Year.png" alt="Descrição da Imagem" width="700"/>
+</p>
 
 ### 5. Interface do Utilizador
 - Organização do menu principal
