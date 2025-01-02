@@ -161,7 +161,9 @@ elif event_save == "-SAVE_JSON-":
 #### 2.1 Adicionar novas publicações
 Para adicionar novas publicações desenolvemos uma interface clara onde é possivel inserir todas as informações da publicação tendo como obrigatoriedade o título e o DOI, uma vez que são parametros importantes para a identificação da publicação.
 
-![Descrição da Imagem](Fotos Projeto/Add Publication.png)
+<div style="text-align: center;">
+  <img src="Fotos%20Projeto/Add%20Publication%20.png" alt="Descrição da Imagem" style="width: 50%;">
+</div>
 
 
 
