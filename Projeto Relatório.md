@@ -157,14 +157,38 @@ elif event_save == "-SAVE_JSON-":
         guardar(caminho_arquivo_save, dados_existentes)
 ```
 
+
 ### 2. Gestão de Publicações
 #### 2.1 Adicionar novas publicações
-Para adicionar novas publicações desenolvemos uma interface clara onde é possivel inserir todas as informações da publicação tendo como obrigatoriedade o título e o DOI, uma vez que são parametros importantes para a identificação da publicação.
+Para adicionar novas publicações desenolvemos uma interface clara onde é possivel inserir todas as informações da publicação tendo como obrigatoriedade o título e o DOI, uma vez que são parametros importantes para a identificação da publicação como no exemplo a seguir:
 
-![Descrição da Imagem](caminho/para/imagem.png)
+<p align="center">
+    <img src="Fotos%20Projeto/Add%20Publication%20.png" alt="logo" width="600"/>
+</p>
 
+Para adicionar novas palavras-chave e novos autores, as seguintes janelas são apresentadas ao utilizador:
+<p align="center">
+    <img src="Fotos%20Projeto/Add%20Keyword.png" alt="Descrição da Imagem" width="400"/>
+    <img src="Fotos%20Projeto/Add%20Author.png" alt="Descrição da Imagem" width="400"/>
+</p>
 
+Caso o utilizador deseje remover alguma das palavras-chave ou autores que tenham adicionado, as seguintes janelas são apresentadas ao utilizador:
+<p align="center">
+    <img src="Fotos%20Projeto/Remove%20Keyword.png" alt="Descrição da Imagem" width="400"/>
+    <img src="Fotos%20Projeto/Remove%20Author.png" alt="Descrição da Imagem" width="400"/>
+</p>
 
+Em caso do utilizador tentar guardar a publicação sem título ou DOI, um aviso será mostrado como no exemplo a seguir:
+<p align="center">
+    <img src="Fotos%20Projeto/Title%20or%20DOI.png" alt="logo" width="300"/>
+</p>
+
+Se porventura for inserido um título ou um DOI já existente, um aviso será mostrado como no exemplo a seguir:
+
+<p align="center">
+    <img src="Fotos%20Projeto/Duplicated%20Title.png" alt="Descrição da Imagem" width="300"/>
+    <img src="Fotos%20Projeto/Duplicated%20DOI.png" alt="Descrição da Imagem" width="300"/>
+</p>
 
 - Atualizar publicações existentes
 - Eliminar publicações
