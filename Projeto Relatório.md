@@ -329,13 +329,17 @@ Após o programa procurar as publicações que apresetem os parâmentros preench
 
 O botão "Save Search" aprsentado na janela serve para o utilizador poder guardar a pesquisa em ficheiro txt ou em um ficheiro json com a mesma estrutura do dataset.
 <p align="center">
-    <img src="Fotos%20Projeto/Duplicated%20Title.png" alt="Descrição da Imagem" width="300"/>
-    <img src="Fotos%20Projeto/Duplicated%20DOI.png" alt="Descrição da Imagem" width="300"/>
+    <img src="Fotos%20Projeto/Save%20Search.png" alt="Descrição da Imagem" width="200"/>
+</p>
+<p align="center">
+    <img src="Fotos%20Projeto/Txt%20File.png" alt="Descrição da Imagem" width="500"/>
+    <img src="Fotos%20Projeto/JSON%20File.png" alt="Descrição da Imagem" width="500"/>
 </p>
 
+#### 3.2 Pesquisa por título
+O programa tem a funcionalidade de apresentar uma lista com todos os títulos das publicações presentes no dataset, com a possibilidade de os organizar por ordem alfabética ou por data de publicação.
 
 
-- Pesquisa por título
 - Pesquisa por autor
 - Pesquisa por afiliação
 - Pesquisa por palavras-chave
