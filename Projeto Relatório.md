@@ -166,11 +166,39 @@ Para adicionar novas publicações desenolvemos uma interface clara onde é poss
     <img src="Fotos%20Projeto/Add%20Publication%20.png" alt="logo" width="600"/>
 </p>
 
+```py
+def criar_publicacoes(publicacoes, values, autores, keywords):
+    title = values["-TITLE-"]
+    abstract = values["-ABSTRACT-"]
+    doi = values["-DOI-"]
+    pdf = values["-PDF-"]
+    url = values["-URL-"]
+    publish_date = values["-PUBLISH_DATE-"]
+
+    if verificar_duplicados(publicacoes, title, doi):
+        return False 
+    
+    nova_publicacao = {
+        "title": title,
+        "abstract": abstract,
+        "doi": doi,
+        "pdf": pdf,
+        "url": url,
+        "publish_date": publish_date,
+        "autores": autores,
+        "keywords": keywords
+    }
+
+    publicacoes.append(nova_publicacao)
+    return True
+```
+
 Para adicionar novas palavras-chave e novos autores, as seguintes janelas são apresentadas ao utilizador:
 <p align="center">
     <img src="Fotos%20Projeto/Add%20Keyword.png" alt="Descrição da Imagem" width="400"/>
     <img src="Fotos%20Projeto/Add%20Author.png" alt="Descrição da Imagem" width="400"/>
 </p>
+
 
 Caso o utilizador deseje remover alguma das palavras-chave ou autores que tenham adicionado, as seguintes janelas são apresentadas ao utilizador:
 <p align="center">
@@ -178,24 +206,122 @@ Caso o utilizador deseje remover alguma das palavras-chave ou autores que tenham
     <img src="Fotos%20Projeto/Remove%20Author.png" alt="Descrição da Imagem" width="400"/>
 </p>
 
+```py
+def remover_keywords(window, values, keywords):
+    selected_keywords = values["-KEYWORDS-"]
+    if selected_keywords:
+        if sg.popup_yes_no("Confirm", "Are you sure you want to remove the selected keywords?", 
+                          icon=sg.SYSTEM_TRAY_MESSAGE_ICON_WARNING) == "Yes":
+            keywords_list = keywords.split(", ")
+            for keyword in selected_keywords:
+                if keyword in keywords_list:
+                    keywords_list.remove(keyword)
+            keywords = ", ".join(keywords_list)
+            window["-KEYWORDS-"].update(keywords_list)
+    else:
+        sg.popup("Please select a keyword to remove", title="No Selection")
+    return keywords
+
+def remover_autores(window_popup, autores, selected_authors):
+    for author in selected_authors:
+        for autor in autores:
+            if f"Name: {autor['name']}; Affiliation: {autor['affiliation']}" == author:
+                autores.remove(autor)
+    authors_info = [f"Name: {autor['name']}; Affiliation: {autor['affiliation']}" for autor in autores]
+    window_popup["-AUTHORS-"].update(authors_info)
+    return autores
+
+```
+
 Em caso do utilizador tentar guardar a publicação sem título ou DOI, um aviso será mostrado como no exemplo a seguir:
 <p align="center">
     <img src="Fotos%20Projeto/Title%20or%20DOI.png" alt="logo" width="300"/>
 </p>
 
 Se porventura for inserido um título ou um DOI já existente, um aviso será mostrado como no exemplo a seguir:
-
 <p align="center">
     <img src="Fotos%20Projeto/Duplicated%20Title.png" alt="Descrição da Imagem" width="300"/>
     <img src="Fotos%20Projeto/Duplicated%20DOI.png" alt="Descrição da Imagem" width="300"/>
 </p>
 
-- Atualizar publicações existentes
-- Eliminar publicações
-- Validação e verificação de duplicados
+```py
+def verificar_duplicados(publicacoes, title, doi, current_pub=None):
+    for publicacao in publicacoes:
+        if publicacao != current_pub: 
+            if title and title.strip() == publicacao.get("title", ""):
+                sg.popup("Title already exists in dataset")
+                return True
+            
+            if doi and doi.strip() == publicacao.get("doi", ""):
+                sg.popup("DOI already exists in dataset") 
+                return True       
+    return False
+```
+
+Após inserir as informações corretamente e guardar a nova publicação, a janela seguinte será exposta:
+<p align="center">
+    <img src="Fotos%20Projeto/File%20Saved.png" alt="logo" width="300"/>
+</p>
+
+#### 2.2 Atualizar publicações existentes
+Para atualizar as informações de uma publicação já existente no dataset desenvolvemos uma interface clara onde serão exibidos todos os parâmentros devidamente preenchidos com as informações da publicação mas com a possibilidade de mudar. Apesar da estrutura e de funções muito semelhante à janela de adicionar publicação, esta apresenta dois novos botões: "Edit" para editar autores já existentes, e "Delete Post" para apagar a publicação do dataset.
+<p align="center">
+    <img src="Fotos%20Projeto/Edit%20Publication.png" alt="logo" width="600"/>
+</p>
+
+```py
+def atualizar_publicacao(values, keywords, autores, publicacao_encontrada, caminho_ficheiro, publicacoes):
+    title = values["-EDIT_TITLE-"].strip()
+    doi = values["-EDIT_DOI-"].strip()
+
+    if verificar_duplicados(publicacoes, title, doi, publicacao_encontrada):
+        return
+    
+    updated_publication = {
+        "title": values["-EDIT_TITLE-"].strip(),
+        "abstract": values["-EDIT_ABSTRACT-"].strip(),
+        "publish_date": values["-EDIT_DATE-"].strip(),
+        "doi": values["-EDIT_DOI-"].strip(),
+        "pdf": values["-EDIT_PDF-"].strip(),
+        "url": values["-EDIT_URL-"].strip(),
+        "keywords": keywords,
+        "authors": autores
+    }
+
+    for key, value in updated_publication.items():
+        publicacao_encontrada[key] = value
+
+    if caminho_ficheiro:
+        guardar(caminho_ficheiro, publicacoes)
+        sg.popup("Publication successfully updated!")
+    else:
+        sg.popup("No file selected for saving")
+```
+
+No caso do utilizador querer editar os autores ja existentes ao selecionar essa opção, o seguinta janela será exibida:
+<p align="center">
+    <img src="Fotos%20Projeto/Edit%20Author.png" alt="logo" width="600"/>
+</p>
+
+Na hipótese do utilizador querer apagar a publicação do dataset, o seguinte aviso será mostrado:
+<p align="center">
+    <img src="Fotos%20Projeto/Delete%20Post.png" alt="logo" width="400"/>
+</p>
+
+```py
+def remover_publicacao(publicacao_encontrada, caminho_ficheiro, publicacoes):
+    publicacoes.remove(publicacao_encontrada)
+    sg.popup("Publication removed successfully!")
+    guardar(caminho_ficheiro, publicacoes)
+```
 
 ### 3. Capacidades de Pesquisa
-- Pesquisa com filtros
+#### 3.1 Pesquisa com filtros
+O programa é capaz de encontrar publicações utilizando vários filtros, tais como, palavra-chave, autor, afiliação, intervalo de tempo. Para realizar a pesquisa a seguinte janela é exibida:
+<p align="center">
+    <img src="Fotos%20Projeto/Delete%20Post.png" alt="logo" width="400"/>
+</p>
+
 - Pesquisa por título
 - Pesquisa por autor
 - Pesquisa por afiliação
