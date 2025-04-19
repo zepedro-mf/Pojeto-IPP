@@ -1,0 +1,40 @@
+[
+    {
+        "id_paciente": 1,
+        "nome": "João Silva",
+        "data_nascimento": "15-08-1985",
+        "sexo": "M",
+        "grupo_risco": "Não",
+        "contacto": "912345678",
+        "historico_consultas": [
+            {
+                "data": "25-03-2024",
+                "medico": "Dra. Maria",
+                "especialidade": "Cardiologia",
+                "diagnostico": "Pressão alta"
+            },
+            {
+                "data": "10-02-2024",
+                "medico": "Dr. Paulo",
+                "especialidade": "Ortopedia",
+                "diagnostico": "Fratura no tornozelo"
+            }
+        ]
+    },
+    {
+        "id_paciente": 2,
+        "nome": "Maria Oliveira",
+        "data_nascimento": "02-11-1990",
+        "sexo": "F",
+        "grupo_risco": "Sim",
+        "contacto": "919876543",
+        "historico_consultas": [
+            {
+                "data": "10-03-2024",
+                "medico": "Dra. Sofia",
+                "especialidade": "Ginecologia",
+                "diagnostico": "Check-up de rotina"
+            }
+        ]
+    }
+]

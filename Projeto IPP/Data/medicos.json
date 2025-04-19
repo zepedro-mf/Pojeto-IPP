@@ -1,0 +1,47 @@
+[
+    {
+        "id_medico": 1,
+        "nome": "Dra. Ana Martins",
+        "data_nascimento": "12-05-1980",
+        "sexo": "F",
+        "especialidade": "Pediatria",
+        "contacto": "912345678",
+        "disponibilidade": [
+            [1, 0, 1, 1],  
+            [0, 0, 0, 0],  
+            [1, 1, 1, 0],  
+            [0, 0, 0, 0],  
+            [1, 1, 0, 0]
+        ]   
+    },
+    {
+        "id_medico": 2,
+        "nome": "Dr. Miguel Silva",
+        "data_nascimento": "30-09-1975",
+        "sexo": "M",
+        "especialidade": "Cardiologia",
+        "contacto": "913456789",
+        "disponibilidade": [
+            [1, 1, 0, 0],  
+            [1, 1, 1, 0],  
+            [0, 0, 0, 0],  
+            [1, 0, 1, 1],  
+            [0, 0, 1, 1]   
+        ]
+    },
+    {
+        "id_medico": 3,
+        "nome": "Dra. Sofia Almeida",
+        "data_nascimento": "22-11-1990",
+        "sexo": "F",
+        "especialidade": "Dermatologia",
+        "contacto": "914567890",
+        "disponibilidade": [
+            [0, 1, 1, 0],
+            [1, 0, 0, 0],
+            [1, 1, 1, 1],
+            [1, 1, 0, 0],
+            [0, 0, 0, 0]
+        ]
+    }
+]
