@@ -6,18 +6,12 @@
         "sexo": "M",
         "grupo_risco": "Não",
         "contacto": "912345678",
-        "historico_consultas": [
+        "historico_consultas": [],
+        "consultas_agendadas": [
             {
-                "data": "25-03-2024",
-                "medico": "Dra. Maria",
-                "especialidade": "Cardiologia",
-                "diagnostico": "Pressão alta"
-            },
-            {
-                "data": "10-02-2024",
-                "medico": "Dr. Paulo",
-                "especialidade": "Ortopedia",
-                "diagnostico": "Fratura no tornozelo"
+                "data": "06-05-2025",
+                "hora": "10:00",
+                "id_medico": 1
             }
         ]
     },
@@ -28,12 +22,115 @@
         "sexo": "F",
         "grupo_risco": "Sim",
         "contacto": "919876543",
+        "historico_consultas": [],
+        "consultas_agendadas": [
+            {
+                "data": "07-05-2025",
+                "hora": "08:00",
+                "id_medico": 1
+            }
+        ]
+    },
+    {
+        "id_paciente": 3,
+        "nome": "Carlos Mendes",
+        "data_nascimento": "30-06-1975",
+        "sexo": "M",
+        "grupo_risco": "Sim",
+        "contacto": "968453210",
+        "historico_consultas": [],
+        "consultas_agendadas": [
+            {
+                "data": "08-05-2025",
+                "hora": "16:00",
+                "id_medico": 2
+            }
+        ]
+    },
+    {
+        "id_paciente": 4,
+        "nome": "Luísa Neves",
+        "data_nascimento": "23-03-1973",
+        "sexo": "F",
+        "grupo_risco": "Sim",
+        "contacto": "912000003",
+        "historico_consultas": [],
+        "consultas_agendadas": [
+            {
+                "data": "05-05-2025",
+                "hora": "09:00",
+                "id_medico": 3
+            }
+        ]
+    },
+    {
+        "id_paciente": 5,
+        "nome": "Tiago Lima",
+        "data_nascimento": "20-09-1998",
+        "sexo": "M",
+        "grupo_risco": "Não",
+        "contacto": "917123456",
+        "historico_consultas": [],
+        "consultas_agendadas": [
+            {
+                "data": "06-05-2025",
+                "hora": "14:00",
+                "id_medico": 4
+            }
+        ]
+    },
+    {
+        "id_paciente": 6,
+        "nome": "Beatriz Fonseca",
+        "data_nascimento": "14-07-1995",
+        "sexo": "F",
+        "grupo_risco": "Não",
+        "contacto": "912000001",
+        "historico_consultas": [],
+        "consultas_agendadas": [
+            {
+                "data": "07-05-2025",
+                "hora": "09:00",
+                "id_medico": 5
+            }
+        ]
+    },
+    {
+        "id_paciente": 7,
+        "nome": "Hugo Matos",
+        "data_nascimento": "02-02-1989",
+        "sexo": "M",
+        "grupo_risco": "Sim",
+        "contacto": "912000002",
+        "historico_consultas": [],
+        "consultas_agendadas": [
+            {
+                "data": "08-05-2025",
+                "hora": "15:00",
+                "id_medico": 5
+            }
+        ]
+    },
+    {
+        "id_paciente": 8,
+        "nome": "Carolina Dias",
+        "data_nascimento": "08-01-1986",
+        "sexo": "F",
+        "grupo_risco": "Não",
+        "contacto": "912000005",
         "historico_consultas": [
             {
-                "data": "10-03-2024",
-                "medico": "Dra. Sofia",
-                "especialidade": "Ginecologia",
-                "diagnostico": "Check-up de rotina"
+                "data": "01-04-2024",
+                "medico": "Dr. Miguel Ferreira",
+                "especialidade": "Cardiologia",
+                "diagnostico": "Check-up normal"
+            }
+        ],
+        "consultas_agendadas": [
+            {
+                "data": "31-05-2025",
+                "hora": "10:00",
+                "id_medico": 1
             }
         ]
     }
